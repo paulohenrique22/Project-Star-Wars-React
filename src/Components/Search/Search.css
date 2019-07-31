@@ -1,0 +1,12 @@
+.navb{
+    background: #232526;  /* Cor da navbar */    
+}
+
+.Loading{
+    
+    font-size: 30px;
+    color: #FFFAFA;
+    padding: 20%;
+    text-align: center;
+    font-family: TXT;
+}
