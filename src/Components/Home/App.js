@@ -17,16 +17,16 @@ class App extends React.Component {
     super(props)
     this.state = {
       Pesquisa: "",
-    }   
+    }
   }
   Page(e) {
-   
+
     const { Pesquisa } = this.state;
-    
-    if(Pesquisa != ""){
+
+    if (Pesquisa != "") {
       e.preventDefault()
       this.props.history.push(`/search/${Pesquisa}`)
-    }else{
+    } else {
       e.preventDefault()
       this.props.history.push(`/`)
 
@@ -35,28 +35,28 @@ class App extends React.Component {
   }
 
   render() {
-    
+
     return (
-      
+
       <div>
-        <AudioPlayer/>
-        <div className="container">            
+        <AudioPlayer />
+        <div className="container">
           <div className="form-group row todo">
             <img src={Image} className="imagem"></img>
             <div className="col-md-6">
-              <input className="form-control inputBusca" id="inputBusca" type="text" placeholder="Search .."  value={this.state.Pesquisa} onChange={e => this.setState({ Pesquisa: e.target.value })} />
+              <input className="form-control inputBusca" id="inputBusca" type="text" placeholder="Search .." value={this.state.Pesquisa} onChange={e => this.setState({ Pesquisa: e.target.value })} />
               <Link to="/Search">
                 <button className="btn btn-warning botao" onClick={($event) => this.Page($event)}>BUSCAR</button>
               </Link>
             </div>
-          </div>         
+          </div>
         </div>
       </div>
-       
+
     )
-    
+
   }
-  
+
 }
 
 export default App;

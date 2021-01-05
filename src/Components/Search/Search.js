@@ -22,12 +22,11 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.BuscarSearch(this.state.Pesquisa)
-
-
     }
+    
     BuscarSearch(Pesquisa) {
         var nomes = new Array();
-        fetch(`https://swapi.co/api/people/?search=${Pesquisa}`, {
+        fetch(`https://swapi.dev/api/people/?search=${Pesquisa}`, {
             method: 'GET'
         })
             .then(res => res.json())
